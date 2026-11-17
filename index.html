@@ -13,7 +13,7 @@
   <style>
     :root{--accent:#0F766E;--accent-dark:#0B5F58;--ink:#111827;--muted:#4B5563;--line:#E5E7EB;--soft:#F9FAFB;--bg:#FFFFFF;--max:1100px}
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+    html{scroll-behavior:smooth;scroll-padding-top:3rem}
     body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:1.0625rem}
     a{color:var(--accent)}
     a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
@@ -25,7 +25,7 @@
     .nav{display:flex;align-items:center;justify-content:space-between;gap:.5rem 1rem;min-height:64px;flex-wrap:wrap}
     .brand{font-weight:700;font-size:1.1rem;color:var(--ink);text-decoration:none}
     .nav ul{display:flex;align-items:center;gap:1.25rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
-    .nav ul a{color:var(--ink);text-decoration:none;font-weight:500}
+    .nav ul a{display:inline-block;padding:.4rem 0;color:var(--ink);text-decoration:none;font-weight:500}
     .nav ul a:hover{color:var(--accent)}
 
     .btn{display:inline-block;padding:.7rem 1.15rem;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--accent);line-height:1.2}
