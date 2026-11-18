@@ -273,6 +273,12 @@
       *,*::before,*::after{animation:none!important;transition:none!important}
       .js .reveal{opacity:1;transform:none}
     }
+    .repo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin-top:2rem}
+    .repo{display:flex;flex-direction:column;gap:.6rem;padding:1.25rem;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.02)}
+    .repo h3{font-size:1.05rem;margin:0}
+    .repo p{margin:0;color:var(--muted);font-size:.93rem}
+    .repo .pills{margin-top:auto}
+    .repo-links{display:flex;gap:1rem;flex-wrap:wrap}
   </style>
 </head>
 <body>
@@ -284,6 +290,7 @@
       <a class="brand" href="#top"><span class="mark" aria-hidden="true">AT</span>Aditya Tripathi</a>
       <ul>
         <li><a href="#work">Projects</a></li>
+        <li><a href="#open-source">Open source</a></li>
         <li><a href="#capabilities">Capabilities</a></li>
         <li><a href="#career">Career</a></li>
         <li><a href="#about">About</a></li>
@@ -514,6 +521,108 @@
             <ul class="pills" aria-label="Tech stack">
               <li class="pill">Java / J2EE</li><li class="pill">Spring Boot</li><li class="pill">REST</li><li class="pill">PostgreSQL</li><li class="pill">IBM DB2</li><li class="pill">Jenkins</li><li class="pill">Heroku</li><li class="pill">SonarQube</li><li class="pill">Angular</li><li class="pill">React</li>
             </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPEN SOURCE -->
+    <section id="open-source" aria-labelledby="oss-title">
+      <div class="wrap">
+        <p class="kicker">Open source</p>
+        <h2 id="oss-title">More projects, with code and live demos</h2>
+        <p class="section-intro">Each one has CI, tests and a README explaining how it works.</p>
+        <div class="repo-grid">
+          <article class="repo">
+            <p class="tagline">Graphics · WebGL 2</p>
+            <h3>Teapot-Shader</h3>
+            <p>Utah teapot built from 32 Bezier patches: wireframe, Blinn-Phong lighting with live material controls, and sphere-mapped textures.</p>
+            <ul class="pills" aria-label="Tech stack"><li class="pill">WebGL 2</li><li class="pill">GLSL</li><li class="pill">JavaScript</li></ul>
+            <div class="repo-links"><a class="link" href="/demos/teapot/">Live demo →</a><a class="link" href="https://github.com/Adit12T/Teapot-Shader" rel="noopener">Code →</a></div>
+          </article>
+          <article class="repo">
+            <p class="tagline">Web app · Healthcare</p>
+            <h3>Healthcare-System</h3>
+            <p>Hospital management: patients, ward bed board, blood bank with compatibility checks, ambulance dispatch and role-based staff access.</p>
+            <ul class="pills" aria-label="Tech stack"><li class="pill">Spring Boot</li><li class="pill">Spring Security</li><li class="pill">Thymeleaf</li><li class="pill">Flyway</li></ul>
+            <div class="repo-links"><a class="link" href="https://github.com/Adit12T/Healthcare-System" rel="noopener">Code →</a></div>
+          </article>
+          <article class="repo">
+            <p class="tagline">Microservices</p>
+            <h3>spring-microservices-platform</h3>
+            <p>Eureka discovery, config server, API gateway with circuit breaker and retry, currency services and users, on Docker Compose.</p>
+            <ul class="pills" aria-label="Tech stack"><li class="pill">Spring Cloud</li><li class="pill">Resilience4j</li><li class="pill">PostgreSQL</li><li class="pill">Zipkin</li></ul>
+            <div class="repo-links"><a class="link" href="https://github.com/Adit12T/spring-microservices-platform" rel="noopener">Code →</a></div>
+          </article>
+          <article class="repo">
+            <p class="tagline">Web app · Security</p>
+            <h3>Secure-Grading-System</h3>
+            <p>Grading system rebuilt for security: hashed passwords, CSRF, role checks, login lockout, signed reset links and an audit log.</p>
+            <ul class="pills" aria-label="Tech stack"><li class="pill">Python</li><li class="pill">Flask</li><li class="pill">SQLite</li></ul>
+            <div class="repo-links"><a class="link" href="https://github.com/Adit12T/Secure-Grading-System" rel="noopener">Code →</a></div>
+          </article>
+          <article class="repo">
+            <p class="tagline">Library · Billing</p>
+            <h3>BILL</h3>
+            <p>Student billing: tuition by residency and load, fees, waivers, scholarships, payments and charges by date, with exact money arithmetic.</p>
+            <ul class="pills" aria-label="Tech stack"><li class="pill">Java 21</li><li class="pill">Jackson</li><li class="pill">JUnit</li></ul>
+            <div class="repo-links"><a class="link" href="https://github.com/Adit12T/BILL" rel="noopener">Code →</a></div>
+          </article>
+          <article class="repo">
+            <p class="tagline">Compiler</p>
+            <h3>C-Compiler</h3>
+            <p>Compiler for a C subset that emits 32-bit x86 assembly, built in three stages; tests compile, link and run real programs.</p>
+            <ul class="pills" aria-label="Tech stack"><li class="pill">C</li><li class="pill">flex</li><li class="pill">bison</li><li class="pill">x86</li></ul>
+            <div class="repo-links"><a class="link" href="https://github.com/Adit12T/C-Compiler" rel="noopener">Code →</a></div>
+          </article>
+          <article class="repo">
+            <p class="tagline">REST API</p>
+            <h3>EmployeeRegister</h3>
+            <p>Employee API with optimistic locking (ETags), auditing, paging and problem-detail errors, tested against real MongoDB.</p>
+            <ul class="pills" aria-label="Tech stack"><li class="pill">Spring Boot</li><li class="pill">MongoDB</li><li class="pill">Testcontainers</li></ul>
+            <div class="repo-links"><a class="link" href="https://github.com/Adit12T/EmployeeRegister" rel="noopener">Code →</a></div>
+          </article>
+          <article class="repo">
+            <p class="tagline">Reactive API</p>
+            <h3>MongoApp</h3>
+            <p>Reactive users API with live server-sent events, aggregation stats and role-based access.</p>
+            <ul class="pills" aria-label="Tech stack"><li class="pill">Spring WebFlux</li><li class="pill">Reactive MongoDB</li></ul>
+            <div class="repo-links"><a class="link" href="https://github.com/Adit12T/MongoApp" rel="noopener">Code →</a></div>
+          </article>
+          <article class="repo">
+            <p class="tagline">DevOps tooling</p>
+            <h3>artifactory-manager</h3>
+            <p>Service for managing JFrog Artifactory repositories and builds, with API keys, caching and timeouts.</p>
+            <ul class="pills" aria-label="Tech stack"><li class="pill">Spring Boot</li><li class="pill">RestClient</li><li class="pill">Caffeine</li></ul>
+            <div class="repo-links"><a class="link" href="https://github.com/Adit12T/artifactory-manager" rel="noopener">Code →</a></div>
+          </article>
+          <article class="repo">
+            <p class="tagline">CLI · Data</p>
+            <h3>Flight-details</h3>
+            <p>Validates flight schedule files row by row, loads them into H2 or MySQL in one transaction, and searches them.</p>
+            <ul class="pills" aria-label="Tech stack"><li class="pill">Java 21</li><li class="pill">JDBC</li><li class="pill">H2 / MySQL</li></ul>
+            <div class="repo-links"><a class="link" href="https://github.com/Adit12T/Flight-details" rel="noopener">Code →</a></div>
+          </article>
+          <article class="repo">
+            <p class="tagline">Front end</p>
+            <h3>react-app</h3>
+            <p>Counter Board: counters with custom steps, saved in the browser, built test-first.</p>
+            <ul class="pills" aria-label="Tech stack"><li class="pill">React 19</li><li class="pill">TypeScript</li><li class="pill">Vitest</li></ul>
+            <div class="repo-links"><a class="link" href="/demos/react-app/">Live demo →</a><a class="link" href="https://github.com/Adit12T/react-app" rel="noopener">Code →</a></div>
+          </article>
+          <article class="repo">
+            <p class="tagline">Front end</p>
+            <h3>Project</h3>
+            <p>Project Tracker: projects by category and status with filters, plus a task feed with timeouts and retry.</p>
+            <ul class="pills" aria-label="Tech stack"><li class="pill">React 19</li><li class="pill">TypeScript</li><li class="pill">Vitest</li></ul>
+            <div class="repo-links"><a class="link" href="/demos/Project/">Live demo →</a><a class="link" href="https://github.com/Adit12T/Project" rel="noopener">Code →</a></div>
+          </article>
+          <article class="repo">
+            <p class="tagline">Data analysis</p>
+            <h3>Swing</h3>
+            <p>Finds patterns in baseball-swing sensor data: thresholds held over a window, on one or two signals.</p>
+            <ul class="pills" aria-label="Tech stack"><li class="pill">Java 21</li><li class="pill">CLI</li></ul>
+            <div class="repo-links"><a class="link" href="https://github.com/Adit12T/Swing" rel="noopener">Code →</a></div>
           </article>
         </div>
       </div>
