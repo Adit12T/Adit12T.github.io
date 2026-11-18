@@ -1,0 +1,30 @@
+name: Rebuild Pages
+
+# Asks GitHub Pages to rebuild from master after every push, including pushes that
+# don't start the automatic Pages build on their own.
+on:
+  push:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Request a Pages build
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" --jq '.status'
+          for i in $(seq 1 20); do
+            sleep 15
+            status=$(gh api "repos/${{ github.repository }}/pages/builds/latest" --jq '.status')
+            echo "Pages build: $status"
+            [ "$status" = "built" ] && exit 0
+            [ "$status" = "errored" ] && exit 1
+          done
+          exit 1
